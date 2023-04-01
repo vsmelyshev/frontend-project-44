@@ -47,7 +47,7 @@ while (n < 3) {
     default:
       result = number1 * number2;
       answer = readlineSync.question('Your answer: ');
-      if (result.toString() === answer) {
+      if (result.toString() === answer.toString()) {
         console.log('Correct!');
         n += 1;
       } else {

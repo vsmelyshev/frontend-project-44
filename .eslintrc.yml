@@ -8,8 +8,7 @@ extends:
   - "plugin:fp/recommended"
 overrides: []
 parserOptions:
-  ecmaVersion: 2020  
-  ecmaVersion: latest
+  ecmaVersion: 2020
   sourceType: module
 rules: 
   no-console: 0

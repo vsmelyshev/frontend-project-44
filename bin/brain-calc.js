@@ -6,10 +6,10 @@ const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 console.log('What is the result of the expression?');
 const operands = ['+', '-', '*'];
-let answer ='';
+let answer = '';
 let n = 0;
 let m = 0;
-let result = 0; 
+let result = 0;
 while (n < 3) {
   const number1 = Math.floor(Math.random() * 101);
   const number2 = Math.floor(Math.random() * 101);

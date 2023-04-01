@@ -35,7 +35,7 @@ while (n < 3) {
     case 1:
       result = number1 - number2;
       answer = readlineSync.question('Your answer: ');
-      if (result.toString() === answer) {
+      if (answer === result.toString()) {
         console.log('Correct!');
         n += 1;
       } else {

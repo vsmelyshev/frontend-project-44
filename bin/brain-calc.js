@@ -7,15 +7,21 @@ console.log(`Hello, ${name}!`);
 console.log('What is the result of the expression?');
 const operands = ['+', '-', '*'];
 let n = 0;
+let m = 0;
 let result = 0;
 while (n < 3) {
   const number1 = Math.floor(Math.random() * 101);
   const number2 = Math.floor(Math.random() * 101);
   const randOper = Math.floor(Math.random() * 3);
+  if (n !== m) {
+    break;
+  }
+  m += 1;
   console.log(`Question: ${number1} ${operands[randOper]} ${number2}`);
-  if (randOper === 0) {
+  switch (randOper) {
+    case 0:
     result = number1 + number2;
-    const answer = readlineSync.question('Your answer: ');
+    var answer = readlineSync.question('Your answer: ');
     if (result.toString() === answer) {
       console.log('Correct!');
       n += 1;
@@ -24,9 +30,10 @@ while (n < 3) {
       console.log(`Let's try again, ${name}!`);
       break;
     }
-  } else if (randOper === 1) {
+    break;
+    case 1:
     result = number1 - number2;
-    const answer = readlineSync.question('Your answer: ');
+    var answer = readlineSync.question('Your answer: ');
     if (result.toString() === answer) {
       console.log('Correct!');
       n += 1;
@@ -35,9 +42,10 @@ while (n < 3) {
       console.log(`Let's try again, ${name}!`);
       break;
     }
-  } else if (randOper === 2) {
+    break;
+    case 2:
     result = number1 * number2;
-    const answer = readlineSync.question('Your answer: ');
+    var answer = readlineSync.question('Your answer: ');
     if (result.toString() === answer) {
       console.log('Correct!');
       n += 1;
@@ -46,8 +54,10 @@ while (n < 3) {
       console.log(`Let's try again, ${name}!`);
       break;
     }
+    break;
   }
 }
+
 if (n === 3) {
   console.log(`Congratulations, ${name}!`);
 }

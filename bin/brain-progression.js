@@ -26,12 +26,10 @@ while (n < 3) {
     n += 1;
     console.log('Correct!');
   } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${progrAll[unknown]}'.`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${progrAll[unknown]}'.\nLet's try again, ${name}!`);
     break;
   }
 }
 if (n === 3) {
   console.log(`Congratulations, ${name}!`);
-} else {
-  console.log(`Let's try again, ${name}!`);
-}
+} 

@@ -32,4 +32,4 @@ while (n < 3) {
 }
 if (n === 3) {
   console.log(`Congratulations, ${name}!`);
-} 
+}

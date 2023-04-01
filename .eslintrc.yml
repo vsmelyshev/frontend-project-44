@@ -1,12 +1,25 @@
+plugins:
+  - fp
 env:
   node: true
   es2021: true
-extends: airbnb-base
+extends:
+  - "airbnb-base"
+  - "plugin:fp/recommended"
 overrides: []
 parserOptions:
+  ecmaVersion: 2020  
   ecmaVersion: latest
   sourceType: module
-rules: {
-  no-console: 0,
+rules: 
+  no-console: 0
   import/extensions: 0
-}
+  no-await-in-loop: 0
+  fp/no-loops: 0
+  fp/no-nil: 0
+  fp/no-unused-expression: 0
+  fp/no-let: 0
+  fp/no-throw: 0
+  fp/no-mutation: 0
+  fp/no-mutating-methods: 0
+

@@ -7,15 +7,11 @@ export default function game(gameCondition, generateRound) {
   let question;
   let answer;
   let userAnswer;
-  
   console.log(gameCondition);
-  
   for (let currentRound = 0; currentRound < roundCount; currentRound += 1) {
     [question, answer] = generateRound();
     console.log(`Question: ${question}`);
-  
     userAnswer = readlineSync.question('Your answer: ');
-  
     if (userAnswer === answer.toString()) {
       console.log('Correct!');
     } else {
@@ -24,6 +20,5 @@ export default function game(gameCondition, generateRound) {
       return;
     }
   }
-  
   console.log(`Congratulations, ${userName}!`);
-};
+}
